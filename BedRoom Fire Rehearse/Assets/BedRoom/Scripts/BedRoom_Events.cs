@@ -23,8 +23,9 @@ public class BedRoom_Events : MonoBehaviour {
     public Transform gameCanvas;
 
     // Other game objects
-    public BedRoom_Fire fireManage;
+    public Transform fireManager;
     public Transform gameButtonTrans;
+    public Transform roomFire;
 
     // Handle object
     public Transform left_Manager;
@@ -45,7 +46,7 @@ public class BedRoom_Events : MonoBehaviour {
         ChangeStepsText("火灾就要波及卧室了，请尽快关好卧室房门！");
 
         // Open the living room particle effects
-        fireManage.FireOn();
+        fireManager.gameObject.SetActive(true);
 
         // Start coroutines
         StartCoroutine(CountDown(time));
@@ -56,14 +57,6 @@ public class BedRoom_Events : MonoBehaviour {
     public void ShutDoor() {
 
         ChangeStepsText("现在尽快拿起床上的被子去卫生间打湿！");
-
-    }
-
-    // Shut the toilet door
-    public void ShutToiletDoor()
-    {
-
-        ChangeStepsText("打开水龙头将被子打湿！");
 
     }
 
@@ -85,7 +78,7 @@ public class BedRoom_Events : MonoBehaviour {
         {
             ChangeStepsText("很遗憾，您本次的演示行动不合格。");
 
-            GameObject.Find("BedRoomFire").GetComponent<BedRoom_RoomFire>().OpenRoomFire();
+            roomFire.gameObject.SetActive(true);
 
             gameButtonTrans.gameObject.SetActive(true);
         }

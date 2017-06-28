@@ -11,36 +11,45 @@ public class BedRoom_Quilt : MonoBehaviour {
     // Water's game object script
     public BedRoom_Water water;
 
+    public Transform waterBasic;
+    public Transform quilt;
+
+    private bool isWater;
+
     // The game object collisions begin
-    private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
+        if (isWater) {
+            // Collider with the Door game object
+            if (other.transform.name == "door")
+            {
 
-        // Collider with the Door game object
-        if (other.transform.name == "door")
-        {
+                quilt.transform.localScale = new Vector3(0.01f, 0.01f, 0.005f);
+                quilt.transform.position = other.transform.position;
 
-            GameObject.Find("quilt").transform.position = other.transform.position;
-
-            // The last step
-            enventManager.win = true;
-            enventManager.GameOver();
+                // The last step
+                enventManager.win = true;
+                enventManager.GameOver();
+            }
         }
-
+        
         // Collider with the IsWater game object
         if (other.transform.name == "IsWater")
         {
-
+            
             // Open the water
             water.OpenWater();
-
+            waterBasic.gameObject.SetActive(true);
         }
     }
 
     // The game object collides
     void OnCollisionStay(Collision other)
     {
-        GameObject.Find("quilt").transform.localScale = new Vector3(0.2f, 0.2f, 1f);
         
+            Debug.Log("Quilt...");
+            quilt.transform.localScale = new Vector3(0.01f, 0.01f, 0.005f);
+            
     }
 
     // When the object closes the tap
@@ -51,6 +60,9 @@ public class BedRoom_Quilt : MonoBehaviour {
 
             // Shut the water
             water.ShutWater();
+            waterBasic.gameObject.SetActive(false);
+
+            isWater = true;
 
             // The next step
             enventManager.ToPutQuilt();
