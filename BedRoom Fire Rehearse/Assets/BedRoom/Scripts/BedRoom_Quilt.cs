@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class BedRoom_Quilt : MonoBehaviour {
 
@@ -13,20 +14,29 @@ public class BedRoom_Quilt : MonoBehaviour {
 
     public Transform waterBasic;
     public Transform quilt;
+    public Transform quiltOnDoor;
+    public Transform quiltFold;
+
+    private int count = 0;
 
     private bool isWater;
 
     // The game object collisions begin
     void OnCollisionEnter(Collision other)
     {
+        
+        quilt.gameObject.SetActive(false);
+        Debug.Log("1");
+        quiltFold.gameObject.SetActive(true);
+
         if (isWater) {
+
             // Collider with the Door game object
-            if (other.transform.name == "door")
+            if (other.transform.name == "IsQuilt")
             {
 
-                quilt.transform.localScale = new Vector3(0.01f, 0.01f, 0.005f);
-                quilt.transform.position = other.transform.position;
-
+                quiltFold.gameObject.SetActive(false);
+                quiltOnDoor.gameObject.SetActive(true);
                 // The last step
                 enventManager.win = true;
                 enventManager.GameOver();
@@ -43,18 +53,10 @@ public class BedRoom_Quilt : MonoBehaviour {
         }
     }
 
-    // The game object collides
-    void OnCollisionStay(Collision other)
-    {
-        
-            Debug.Log("Quilt...");
-            quilt.transform.localScale = new Vector3(0.01f, 0.01f, 0.005f);
-            
-    }
-
     // When the object closes the tap
     void OnCollisionExit(Collision other)
     {
+
         // Collision with the IsWater game object
         if (other.transform.name == "IsWater") {
 
@@ -63,10 +65,12 @@ public class BedRoom_Quilt : MonoBehaviour {
             waterBasic.gameObject.SetActive(false);
 
             isWater = true;
-
-            // The next step
-            enventManager.ToPutQuilt();
-
+            count = count + 1;
+            if (count == 1) {
+                // The next step
+                enventManager.ToPutQuilt();
+            }
+            
         }
     }
 }

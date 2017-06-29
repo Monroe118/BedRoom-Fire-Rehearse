@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using VRTK;
+using UnityEngine.SceneManagement;
 
 public class BedRoom_Events : MonoBehaviour {
 
     // Set the countdown time
-    private int time;
+    private int time = 0;
 
-    public bool win;
+    public bool win = false;
 
     // The countdown conditions
     private bool startGame;
@@ -37,13 +37,15 @@ public class BedRoom_Events : MonoBehaviour {
         // Initialize the
         time = 180;
         startGame = true;
+        win = false;
 
         // Display panel control
         mainCanvas.gameObject.SetActive(false);
         gameCanvas.gameObject.SetActive(true);
+        gameButtonTrans.gameObject.SetActive(false);
 
         // Display content
-        ChangeStepsText("火灾就要波及卧室了，请尽快关好卧室房门！");
+        ChangeStepsText("火灾就要波及卧室了，请您尽快关好卧室房门！");
 
         // Open the living room particle effects
         fireManager.gameObject.SetActive(true);
@@ -56,21 +58,32 @@ public class BedRoom_Events : MonoBehaviour {
     // Shut the door
     public void ShutDoor() {
 
-        ChangeStepsText("现在尽快拿起床上的被子去卫生间打湿！");
+        ChangeStepsText("请您尽快拿起床上的被子去卫生间打湿！");
+
+    }
+
+    // Shut the door
+    public void ShutDoors()
+    {
+
+        ChangeStepsText("请您赶紧把门关上，火灾即将波及卧室了，危险。赶紧进行下一步！");
 
     }
 
     // Put a quilt
     public void ToPutQuilt() {
 
-        ChangeStepsText("将打湿的被子塞到卧室门的缝隙！");
+        ChangeStepsText("请您将打湿的被子塞到卧室门下的缝隙！");
 
     }
 
     public void GameOver() {
+
         if (win)
         {
-            ChangeStepsText("恭喜你成功通过测试！");
+            ChangeStepsText("恭喜您成功通过测试！");
+
+            downTime.text = ("").ToString();
 
             gameButtonTrans.gameObject.SetActive(true);
         }
@@ -78,10 +91,20 @@ public class BedRoom_Events : MonoBehaviour {
         {
             ChangeStepsText("很遗憾，您本次的演示行动不合格。");
 
+            downTime.text = ("").ToString();
+
             roomFire.gameObject.SetActive(true);
 
             gameButtonTrans.gameObject.SetActive(true);
+
         }
+    }
+
+    // Re - start the exercise
+    public void GameStart(string sceneName) {
+
+        SceneManager.LoadScene(sceneName);
+
     }
 
     public void ChangeStepsText(string str)
@@ -94,18 +117,25 @@ public class BedRoom_Events : MonoBehaviour {
     {
         while (startGame)
         {
+
             if (time > 0)
             {
-                downTime.text = time.ToString();
-                time--;
+                if (win == false)
+                {
+                    downTime.text = time.ToString();
+                    time--;
+                }
+                else
+                {
+                    time = 0;
+                }
             }
             else
             {
                 GameOver();
-
                 StopCoroutine("CountDown");
             }
-
+            
             yield return new WaitForSeconds(1);
         }
     }
