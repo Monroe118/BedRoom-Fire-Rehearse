@@ -6,6 +6,7 @@ public class BedRoom_Door : MonoBehaviour {
 
     public BedRoom_Events eventManager;
     private int count = 0;
+    public bool isDoorShut;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -13,12 +14,14 @@ public class BedRoom_Door : MonoBehaviour {
         // Closed for the first time
         if (collider.name == "IsDoor") {
             count += 1;
+
+            isDoorShut = true;
+
             if (count == 1) {
 
                 eventManager.ShutDoor();
 
             }
-
         }
     }
 
@@ -28,7 +31,7 @@ public class BedRoom_Door : MonoBehaviour {
         // Exit for the first time
         if (other.name == "IsDoor")
         {
-          
+            isDoorShut = false;
             eventManager.ShutDoors();
 
         }
