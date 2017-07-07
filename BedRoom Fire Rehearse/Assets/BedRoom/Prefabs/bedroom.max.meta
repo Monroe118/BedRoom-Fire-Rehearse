@@ -1,0 +1,398 @@
+fileFormatVersion: 2
+guid: fe8514f3654ce5446ae68238bd059b26
+timeCreated: 1497429286
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ' ceiling'
+    100002: ' curtain'
+    100004: ' curtain001'
+    100006: ' faucet'
+    100008: ' faucet cold'
+    100010: ' faucet hot'
+    100012: ' floor'
+    100014: air conditioning
+    100016: bathroom floor
+    100018: //RootNode
+    100020: Bedside table
+    100022: Bedside table01
+    100024: bedstead
+    100026: board
+    100028: books
+    100030: Box
+    100032: carpet
+    100034: ceiling02
+    100036: Curtain rod
+    100038: door
+    100040: Door frame
+    100042: door02
+    100044: floor02
+    100046: galss door03
+    100048: glass
+    100050: glass door
+    100052: glass door01
+    100054: glass door02
+    100056: glass03
+    100058: hadle
+    100060: Hand washing trough
+    100062: hardcore
+    100064: jardiniere
+    100066: jardiniere01
+    100068: light
+    100070: light01
+    100072: light01_MeshPart0
+    100074: light01_MeshPart1
+    100076: mattress
+    100078: mesa
+    100080: metope
+    100082: metope01
+    100084: metope02
+    100086: mirror
+    100088: mirror01
+    100090: pillars
+    100092: pillow
+    100094: pillow006
+    100096: pillow01
+    100098: pillow02
+    100100: pillow03
+    100102: pillow05
+    100104: plug
+    100106: quilt
+    100108: shower
+    100110: stinkpot
+    100112: The handle
+    100114: The wardrobe
+    100116: toilet lid
+    100118: tv
+    100120: TV ark
+    100122: VRayLight004
+    100124: VRayLight006
+    100126: VRayLight007
+    100128: VRayLight008
+    100130: VRayLight009
+    100132: VRayLight010
+    100134: water proof
+    100136: wood
+    400000: ' ceiling'
+    400002: ' curtain'
+    400004: ' curtain001'
+    400006: ' faucet'
+    400008: ' faucet cold'
+    400010: ' faucet hot'
+    400012: ' floor'
+    400014: air conditioning
+    400016: bathroom floor
+    400018: //RootNode
+    400020: Bedside table
+    400022: Bedside table01
+    400024: bedstead
+    400026: board
+    400028: books
+    400030: Box
+    400032: carpet
+    400034: ceiling02
+    400036: Curtain rod
+    400038: door
+    400040: Door frame
+    400042: door02
+    400044: floor02
+    400046: galss door03
+    400048: glass
+    400050: glass door
+    400052: glass door01
+    400054: glass door02
+    400056: glass03
+    400058: hadle
+    400060: Hand washing trough
+    400062: hardcore
+    400064: jardiniere
+    400066: jardiniere01
+    400068: light
+    400070: light01
+    400072: light01_MeshPart0
+    400074: light01_MeshPart1
+    400076: mattress
+    400078: mesa
+    400080: metope
+    400082: metope01
+    400084: metope02
+    400086: mirror
+    400088: mirror01
+    400090: pillars
+    400092: pillow
+    400094: pillow006
+    400096: pillow01
+    400098: pillow02
+    400100: pillow03
+    400102: pillow05
+    400104: plug
+    400106: quilt
+    400108: shower
+    400110: stinkpot
+    400112: The handle
+    400114: The wardrobe
+    400116: toilet lid
+    400118: tv
+    400120: TV ark
+    400122: VRayLight004
+    400124: VRayLight006
+    400126: VRayLight007
+    400128: VRayLight008
+    400130: VRayLight009
+    400132: VRayLight010
+    400134: water proof
+    400136: wood
+    2300000: ' ceiling'
+    2300002: ' curtain'
+    2300004: ' curtain001'
+    2300006: ' faucet'
+    2300008: ' faucet cold'
+    2300010: ' faucet hot'
+    2300012: ' floor'
+    2300014: air conditioning
+    2300016: bathroom floor
+    2300018: Bedside table
+    2300020: Bedside table01
+    2300022: bedstead
+    2300024: board
+    2300026: books
+    2300028: Box
+    2300030: carpet
+    2300032: ceiling02
+    2300034: Curtain rod
+    2300036: door
+    2300038: Door frame
+    2300040: door02
+    2300042: floor02
+    2300044: galss door03
+    2300046: glass
+    2300048: glass door
+    2300050: glass door01
+    2300052: glass door02
+    2300054: glass03
+    2300056: hadle
+    2300058: Hand washing trough
+    2300060: hardcore
+    2300062: jardiniere
+    2300064: jardiniere01
+    2300066: light
+    2300068: light01_MeshPart0
+    2300070: light01_MeshPart1
+    2300072: mattress
+    2300074: mesa
+    2300076: metope
+    2300078: metope01
+    2300080: metope02
+    2300082: mirror
+    2300084: mirror01
+    2300086: pillars
+    2300088: pillow
+    2300090: pillow006
+    2300092: pillow01
+    2300094: pillow02
+    2300096: pillow03
+    2300098: pillow05
+    2300100: plug
+    2300102: quilt
+    2300104: shower
+    2300106: stinkpot
+    2300108: The handle
+    2300110: The wardrobe
+    2300112: toilet lid
+    2300114: tv
+    2300116: TV ark
+    2300118: water proof
+    2300120: wood
+    3300000: ' ceiling'
+    3300002: ' curtain'
+    3300004: ' curtain001'
+    3300006: ' faucet'
+    3300008: ' faucet cold'
+    3300010: ' faucet hot'
+    3300012: ' floor'
+    3300014: air conditioning
+    3300016: bathroom floor
+    3300018: Bedside table
+    3300020: Bedside table01
+    3300022: bedstead
+    3300024: board
+    3300026: books
+    3300028: Box
+    3300030: carpet
+    3300032: ceiling02
+    3300034: Curtain rod
+    3300036: door
+    3300038: Door frame
+    3300040: door02
+    3300042: floor02
+    3300044: galss door03
+    3300046: glass
+    3300048: glass door
+    3300050: glass door01
+    3300052: glass door02
+    3300054: glass03
+    3300056: hadle
+    3300058: Hand washing trough
+    3300060: hardcore
+    3300062: jardiniere
+    3300064: jardiniere01
+    3300066: light
+    3300068: light01_MeshPart0
+    3300070: light01_MeshPart1
+    3300072: mattress
+    3300074: mesa
+    3300076: metope
+    3300078: metope01
+    3300080: metope02
+    3300082: mirror
+    3300084: mirror01
+    3300086: pillars
+    3300088: pillow
+    3300090: pillow006
+    3300092: pillow01
+    3300094: pillow02
+    3300096: pillow03
+    3300098: pillow05
+    3300100: plug
+    3300102: quilt
+    3300104: shower
+    3300106: stinkpot
+    3300108: The handle
+    3300110: The wardrobe
+    3300112: toilet lid
+    3300114: tv
+    3300116: TV ark
+    3300118: water proof
+    3300120: wood
+    4300000: board
+    4300002: pillow05
+    4300004: bedstead
+    4300006: pillow
+    4300008: pillow01
+    4300010: quilt
+    4300012: Bedside table01
+    4300014: Bedside table
+    4300016: ' floor'
+    4300018: ' curtain'
+    4300020: Curtain rod
+    4300022: air conditioning
+    4300024: Hand washing trough
+    4300026: shower
+    4300028: Box
+    4300030: toilet lid
+    4300032: mesa
+    4300034: stinkpot
+    4300036: metope01
+    4300038: mirror01
+    4300040: mirror
+    4300042: glass03
+    4300044: water proof
+    4300046: bathroom floor
+    4300048: mattress
+    4300050: The wardrobe
+    4300052: tv
+    4300054: jardiniere01
+    4300056: jardiniere
+    4300058: TV ark
+    4300060: books
+    4300062: carpet
+    4300064: galss door03
+    4300066: glass door02
+    4300068: glass door
+    4300070: glass door01
+    4300072: pillars
+    4300074: door
+    4300076: pillow02
+    4300078: pillow03
+    4300080: floor02
+    4300082: metope
+    4300084: ' ceiling'
+    4300086: light
+    4300088: plug
+    4300090: metope02
+    4300092: ceiling02
+    4300094: hardcore
+    4300096: glass
+    4300098: wood
+    4300100: The handle
+    4300102: ' faucet'
+    4300104: ' faucet hot'
+    4300106: ' faucet cold'
+    4300108: light01_MeshPart0
+    4300110: light01_MeshPart1
+    4300112: Door frame
+    4300114: door02
+    4300116: hadle
+    4300118: ' curtain001'
+    4300120: pillow006
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
